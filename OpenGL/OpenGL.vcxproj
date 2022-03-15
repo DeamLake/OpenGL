@@ -167,8 +167,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\app.cpp" />
-    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="app.cpp" />
+    <ClCompile Include="Utils\glad.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Shaders\Shader.h" />
+    <ClInclude Include="Utils\Camera.h" />
+    <ClInclude Include="Utils\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\fs.glsl" />
+    <None Include="Shaders\vs.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resource\Textures\awesomeface.png" />
+    <Image Include="Resource\Textures\container.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
