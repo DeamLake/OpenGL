@@ -36,6 +36,9 @@
   <ItemGroup>
     <None Include="Shaders\fs.glsl" />
     <None Include="Shaders\vs.glsl" />
+    <None Include="packages.config" />
+    <None Include="Shaders\light_fs.glsl" />
+    <None Include="Shaders\light_vs.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resource\Textures\container.jpg">
