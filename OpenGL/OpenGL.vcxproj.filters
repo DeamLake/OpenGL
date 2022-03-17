@@ -118,8 +118,4 @@
   <ItemGroup>
     <Text Include="Resource\models\nanosuit\LICENSE.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Object Include="Resource\models\nanosuit\nanosuit.obj" />
-    <Object Include="Resource\models\dragon\dragon.obj" />
-  </ItemGroup>
 </Project>

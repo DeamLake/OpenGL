@@ -79,7 +79,7 @@ int main()
     // ------------------------------------
     Shader ourShader("Shaders/vs.glsl", "Shaders/fs.glsl");
 
-    Model ourModel("Resource/models/dragon/dragon.obj");
+    Model ourModel("Resource/models/nanosuit/nanosuit.obj");
 
     // render loop
     // -----------
