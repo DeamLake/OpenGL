@@ -105,7 +105,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)\OpenLib\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimpd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -126,7 +126,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)\OpenLib\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimpd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -143,7 +143,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)\OpenLib\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimpd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -164,7 +164,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)\OpenLib\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimpd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -174,18 +174,50 @@
   <ItemGroup>
     <ClInclude Include="Shaders\Shader.h" />
     <ClInclude Include="Utils\Camera.h" />
+    <ClInclude Include="Utils\Mesh.h" />
+    <ClInclude Include="Utils\Model.h" />
     <ClInclude Include="Utils\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Resource\models\dragon\long.max" />
+    <None Include="Resource\models\dragon\long.mb" />
+    <None Include="Resource\models\nanosuit\nanosuit.blend" />
+    <None Include="Resource\models\nanosuit\nanosuit.mtl" />
     <None Include="Shaders\fs.glsl" />
     <None Include="Shaders\light_fs.glsl" />
     <None Include="Shaders\light_vs.glsl" />
     <None Include="Shaders\vs.glsl" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Resource\models\nanosuit\arm_dif.png" />
+    <Image Include="Resource\models\nanosuit\arm_showroom_ddn.png" />
+    <Image Include="Resource\models\nanosuit\arm_showroom_spec.png" />
+    <Image Include="Resource\models\nanosuit\body_dif.png" />
+    <Image Include="Resource\models\nanosuit\body_showroom_ddn.png" />
+    <Image Include="Resource\models\nanosuit\body_showroom_spec.png" />
+    <Image Include="Resource\models\nanosuit\glass_ddn.png" />
+    <Image Include="Resource\models\nanosuit\glass_dif.png" />
+    <Image Include="Resource\models\nanosuit\hand_dif.png" />
+    <Image Include="Resource\models\nanosuit\hand_showroom_ddn.png" />
+    <Image Include="Resource\models\nanosuit\hand_showroom_spec.png" />
+    <Image Include="Resource\models\nanosuit\helmet_diff.png" />
+    <Image Include="Resource\models\nanosuit\helmet_showroom_ddn.png" />
+    <Image Include="Resource\models\nanosuit\helmet_showroom_spec.png" />
+    <Image Include="Resource\models\nanosuit\leg_dif.png" />
+    <Image Include="Resource\models\nanosuit\leg_showroom_ddn.png" />
+    <Image Include="Resource\models\nanosuit\leg_showroom_spec.png" />
     <Image Include="Resource\Textures\awesomeface.png" />
     <Image Include="Resource\Textures\container.jpg" />
+    <Image Include="Resource\Textures\container2.png" />
+    <Image Include="Resource\Textures\container2_specular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resource\models\nanosuit\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Resource\models\dragon\dragon.obj" />
+    <Object Include="Resource\models\nanosuit\nanosuit.obj" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
