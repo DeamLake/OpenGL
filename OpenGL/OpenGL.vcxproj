@@ -168,7 +168,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="app.cpp" />
+    <ClCompile Include="Scenes\ShadowMapping.cpp" />
     <ClCompile Include="Utils\glad.c" />
   </ItemGroup>
   <ItemGroup>
@@ -184,10 +184,20 @@
     <None Include="Resource\models\dragon\long.mb" />
     <None Include="Resource\models\nanosuit\nanosuit.blend" />
     <None Include="Resource\models\nanosuit\nanosuit.mtl" />
+    <None Include="Shaders\blingPhongLighting_vs.glsl" />
+    <None Include="Shaders\blingPhongLighting_fs.glsl" />
+    <None Include="Shaders\envMap_fs.glsl" />
+    <None Include="Shaders\instance_vs.glsl" />
     <None Include="Shaders\fs.glsl" />
-    <None Include="Shaders\light_fs.glsl" />
-    <None Include="Shaders\light_vs.glsl" />
-    <None Include="Shaders\vs.glsl" />
+    <None Include="Shaders\lightCube_fs.glsl" />
+    <None Include="Shaders\planet_vs.glsl" />
+    <None Include="Shaders\shadowObject_fs.glsl" />
+    <None Include="Shaders\shadowObject_vs.glsl" />
+    <None Include="Shaders\simpleDepthShader_fs.glsl" />
+    <None Include="Shaders\simpleDepthShader_vs.glsl" />
+    <None Include="Shaders\skybox_fs.glsl" />
+    <None Include="Shaders\skybox_vs.glsl" />
+    <None Include="Shaders\envMap_vs.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resource\models\nanosuit\arm_dif.png" />

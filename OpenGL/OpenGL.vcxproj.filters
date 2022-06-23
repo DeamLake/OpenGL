@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="app.cpp">
+    <ClCompile Include="Utils\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Utils\glad.c">
+    <ClCompile Include="Scenes\ShadowMapping.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -40,15 +40,25 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shaders\fs.glsl" />
-    <None Include="Shaders\vs.glsl" />
+    <None Include="Shaders\envMap_fs.glsl" />
+    <None Include="Shaders\envMap_vs.glsl" />
     <None Include="packages.config" />
-    <None Include="Shaders\light_fs.glsl" />
-    <None Include="Shaders\light_vs.glsl" />
+    <None Include="Shaders\skybox_fs.glsl" />
+    <None Include="Shaders\skybox_vs.glsl" />
     <None Include="Resource\models\nanosuit\nanosuit.blend" />
     <None Include="Resource\models\nanosuit\nanosuit.mtl" />
     <None Include="Resource\models\dragon\long.max" />
     <None Include="Resource\models\dragon\long.mb" />
+    <None Include="Shaders\instance_vs.glsl" />
+    <None Include="Shaders\planet_vs.glsl" />
+    <None Include="Shaders\fs.glsl" />
+    <None Include="Shaders\blingPhongLighting_vs.glsl" />
+    <None Include="Shaders\blingPhongLighting_fs.glsl" />
+    <None Include="Shaders\shadowObject_vs.glsl" />
+    <None Include="Shaders\lightCube_fs.glsl" />
+    <None Include="Shaders\simpleDepthShader_vs.glsl" />
+    <None Include="Shaders\simpleDepthShader_fs.glsl" />
+    <None Include="Shaders\shadowObject_fs.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resource\Textures\container.jpg">
