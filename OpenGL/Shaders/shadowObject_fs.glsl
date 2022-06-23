@@ -18,14 +18,23 @@ float ShadowCalculation(vec4 FragPosLightSpace)
 {
     vec3 projCoords = FragPosLightSpace.xyz / FragPosLightSpace.w;
     projCoords = projCoords * 0.5 + 0.5;
-    float closestDepth = texture(shadowMap, projCoords.xy).r;
 
     // 解决阴影偏移
     vec3 normal = normalize(fs_in.Normal);
     vec3 light_dir = normalize(lightPos - fs_in.FragPos);
     float bias = max(0.05 * (1.0 - dot(normal, light_dir)), 0.005);
 
-    float shadow = projCoords.z - bias > closestDepth ? 1.0 : 0.0;
+    // PCF 多次采样取平均
+    float shadow = 0.0;
+    vec2 texelSize = 1.0 / textureSize(shadowMap, 0);
+    for(int x = -1; x <= 1; ++x){
+        for(int y = -1; y <= 1; ++y){
+            float pcfDepth = texture(shadowMap, projCoords.xy + vec2(x,y) * texelSize).r;
+            shadow += projCoords.z - bias > pcfDepth ? 1.0 : 0.0;
+        }
+    }
+    shadow /= 9.0;
+
     if(projCoords.z > 1.0)
         shadow = 0.0;
     return shadow;
